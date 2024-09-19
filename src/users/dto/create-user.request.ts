@@ -1,4 +1,9 @@
+import { IsEmail, IsStrongPassword } from 'class-validator';
+
 export class CreateUserRequest {
-  remail: string;
+  @IsEmail()
+  email: string;
+
+  @IsStrongPassword()
   password: string;
 }
